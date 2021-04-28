@@ -113,7 +113,7 @@ body::-webkit-scrollbar-thumb {
   font-family: "Quicksand", sans-serif;
 }
 
-.divider {
+.dividerA {
   position: relative;
   top: 0;
   left: 0;
@@ -122,8 +122,134 @@ body::-webkit-scrollbar-thumb {
   line-height: 0;
 }
 
+.dividerA svg {
+  width: 136%;
+  height: 6.3rem;
+}
+
 #aboutUs h1 {
   color: white;
   font-size: 2.1rem;
   text-align: center;
+}
+
+#ourServices {
+  position: relative;
+  width: calc(100vw - 0.95rem);
+  left: -8px;
+
+  background-color: white;
+  height: 584px;
+
+  font-family: "Quicksand", sans-serif;
+}
+
+.dividerB {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.dividerB svg {
+  width: 124%;
+  height: 7.5rem;
+}
+
+#ourServices h1 {
+  color: black;
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+#ourTeam {
+  position: relative;
+  width: calc(100vw - 0.95rem);
+  left: -8px;
+
+  background-color: #b2b1d9;
+  height: 463px;
+
+  font-family: "Quicksand", sans-serif;
+}
+
+.dividerC {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.dividerC svg {
+  width: 109%;
+  height: 6.75rem;
+}
+
+#ourTeam h1 {
+  color: black;
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+#quoteFrom {
+  position: relative;
+  width: calc(100vw - 0.95rem);
+  left: -8px;
+
+  background-color: white;
+  height: 827px;
+
+  font-family: "Quicksand", sans-serif;
+}
+
+.dividerD {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.dividerD svg {
+  width: 109%;
+  height: 6.75rem;
+}
+
+#quoteFrom h1 {
+  color: black;
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 978px) {
+  #aboutUs,
+  #ourServices,
+  #ourTeam {
+    width: 100vw;
+  }
+
+  .dividerA svg {
+    width: 105%;
+    height: 2.7rem;
+  }
+
+  .dividerB svg {
+    width: 115%;
+    height: 2.4rem;
+  }
+
+  .dividerC svg {
+    width: 109%;
+    height: 2.85rem;
+  }
+
+  .dividerD svg {
+    width: 109%;
+    height: 2.85rem;
+  }
 }
