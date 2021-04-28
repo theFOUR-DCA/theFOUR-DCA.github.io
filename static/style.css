@@ -102,24 +102,26 @@ body::-webkit-scrollbar-thumb {
   transition: 200ms;
 }
 
-#aboutUs {
+.section {
   position: relative;
   width: calc(100vw - 0.95rem);
   left: -8px;
 
-  background-color: black;
-  height: 584px;
-
   font-family: "Quicksand", sans-serif;
 }
 
-.dividerA {
+.divider {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+}
+
+#aboutUs {
+  background-color: black;
+  height: 584px;
 }
 
 .dividerA svg {
@@ -134,23 +136,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #ourServices {
-  position: relative;
-  width: calc(100vw - 0.95rem);
-  left: -8px;
-
   background-color: white;
   height: 584px;
-
-  font-family: "Quicksand", sans-serif;
-}
-
-.dividerB {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
 }
 
 .dividerB svg {
@@ -165,23 +152,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #ourTeam {
-  position: relative;
-  width: calc(100vw - 0.95rem);
-  left: -8px;
-
   background-color: #b2b1d9;
   height: 463px;
-
-  font-family: "Quicksand", sans-serif;
-}
-
-.dividerC {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
 }
 
 .dividerC svg {
@@ -196,23 +168,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #quoteFrom {
-  position: relative;
-  width: calc(100vw - 0.95rem);
-  left: -8px;
-
   background-color: white;
   height: 827px;
-
-  font-family: "Quicksand", sans-serif;
-}
-
-.dividerD {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
 }
 
 .dividerD svg {
@@ -229,7 +186,8 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 978px) {
   #aboutUs,
   #ourServices,
-  #ourTeam {
+  #ourTeam,
+  #quoteFrom {
     width: 100vw;
   }
 
