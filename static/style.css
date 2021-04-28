@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  /* margin: 0px 8px 0px 8px; */
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #b2b1d9 #242430;
+}
+
+body::-webkit-scrollbar {
+  width: 0.95rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #242430;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #b2b1d9;
+}
+
+/* body a {
+    align-self: left;
+} */
+
+.logo {
+  width: 84px;
+  height: 84px;
+  margin: 8px 0px 0px 16px;
+
+  transition: 400ms;
+}
+
+.logo:hover {
+  -webkit-filter: drop-shadow(2px 2px 0px #b2b1d9);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#b2b1d9')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#b2b1d9')";
+}
+
+.quoteBtn {
+  position: absolute;
+  right: 16px;
+  margin: 29px 16px 0px 0px;
+  padding: 0px 16px 0px 16px;
+
+  background-color: black;
+  border-radius: 24px;
+  width: 150px;
+
+  line-height: 42px;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hContainer {
+  position: relative;
+
+  /* height: 584px; */
+  height: calc(100vh - 115px);
+  margin: 0px 8px 0px 8px;
+
+  border-style: dashed;
+  border-color: lightgray;
+  border-width: 1px;
+
+  font-family: "Quicksand", sans-serif;
+}
+
+.hContainer h2 {
+  transform: rotate(90deg);
+  transform-origin: 0% 100%;
+
+  position: absolute;
+  top: -63px;
+  left: 29px;
+
+  width: calc(100vh - 115px);
+  line-height: 42px;
+
+  text-align: center;
+}
+
+.hContainer h2 a {
+  font-size: 1.8rem;
+  color: black;
+  text-decoration: none;
+
+  transition: 400ms;
+}
+
+.hContainer h2 a:hover {
+  text-shadow: 2px -2px #b2b1d9;
+
+  transition: 200ms;
+}
+
+#aboutUs {
+  position: relative;
+  width: calc(100vw - 0.95rem);
+  left: -8px;
+
+  background-color: black;
+  height: 584px;
+
+  font-family: "Quicksand", sans-serif;
+}
+
+.divider {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+#aboutUs h1 {
+  color: white;
+  font-size: 2.1rem;
+  text-align: center;
+}
