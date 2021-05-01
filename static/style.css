@@ -226,3 +226,28 @@ body::-webkit-scrollbar-thumb {
     height: 2.85rem;
   }
 }
+
+/* 404 */
+
+.Err404 {
+  position: absolute;
+  margin: calc(50vw - 25%) calc(50vw - 25%);
+  width: 50%;
+  height: 50%;
+}
+
+.Err404 h1 {
+  margin: auto;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.8rem;
+}
+
+.Err404 h5 {
+  margin: auto;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  color: lightgray;
+}
+
