@@ -68,6 +68,7 @@ body::-webkit-scrollbar-thumb {
 
 .quoteBtn:hover {
   background-color: #b2b1d9;
+  color: black;
 }
 
 /* .quoteBtn:hover::after {
@@ -94,10 +95,10 @@ body::-webkit-scrollbar-thumb {
   transform-origin: 0% 100%;
 
   position: absolute;
-  top: -63px;
+  top: -45px;
   left: 29px;
 
-  width: calc(100vh - 115px);
+  width: calc(100vh - 105px);
   line-height: 42px;
 
   text-align: center;
@@ -119,7 +120,7 @@ body::-webkit-scrollbar-thumb {
 
 .section {
   position: relative;
-  width: calc(100vw - 0.95rem);
+  width: calc(100vw - .45rem);
   left: -8px;
 
   font-family: "Quicksand", sans-serif;
@@ -151,7 +152,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #ourServices {
-  background-color: white;
+  background-color: black;
   height: 584px;
 }
 
@@ -161,14 +162,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 #ourServices h1 {
-  color: black;
+  color: white;
   font-size: 2.1rem;
   text-align: center;
 }
 
 #ourTeam {
-  background-color: #b2b1d9;
-  height: 463px;
+  background-color: white;
+  /* height: 463px; */
 }
 
 .dividerC svg {
@@ -182,8 +183,44 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
+.container .row .col {
+  padding: 15px;
+
+  /* border-style: dashed; */
+  /* border-width: 1px; */
+}
+
+.container .row .col img {
+  padding: 10px 20px;
+
+  width: 100%;
+  height: auto;
+}
+
+.container .row .col h4 {
+  text-align: center;
+}
+
+.container .row .col h6 {
+  color: #b2b1d9;
+}
+
+.container .row .col .hashtags {
+  color: gray;
+}
+
+.container .row .col a svg path {
+  fill: black;
+
+  transition: 400ms;
+}
+
+.container .row .col a svg path:hover {
+  fill: #b2b1d9;
+}
+
 #quoteFrom {
-  background-color: white;
+  background-color: black;
   height: 827px;
 }
 
@@ -193,7 +230,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #quoteFrom h1 {
-  color: black;
+  color: white;
   font-size: 2.1rem;
   text-align: center;
 }
@@ -250,4 +287,3 @@ body::-webkit-scrollbar-thumb {
   font-size: 1.2rem;
   color: lightgray;
 }
-
