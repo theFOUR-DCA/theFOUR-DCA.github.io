@@ -230,7 +230,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .dividerE svg {
-  width: 100%;
+  width: 109%;
   height: 1.75rem;
 }
 
@@ -264,12 +264,24 @@ body::-webkit-scrollbar-thumb {
     width: 100vw;
   }
 
+  .section {
+    position: relative;
+    width: 100vw;
+    left: 0px;
+  }
+
+  .divider {
+    width: 100%;
+  }
+
   .dividerA svg {
     width: 105%;
     height: 2.7rem;
   }
 
-  .dividerC svg {
+  .dividerC svg,
+  .dividerD svg,
+  .dividerE svg {
     width: 109%;
     height: 2.85rem;
   }
@@ -280,11 +292,6 @@ body::-webkit-scrollbar-thumb {
 
   .container .row .col img {
     padding: 10px 20px;
-  }
-
-  .dividerD svg {
-    width: 109%;
-    height: 2.85rem;
   }
 }
 
