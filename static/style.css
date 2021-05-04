@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -71,21 +72,11 @@ body::-webkit-scrollbar-thumb {
   color: black;
 }
 
-/* .quoteBtn:hover::after {
-    border-width: 1px;
-    border-color: black;
-} */
-
 .hContainer {
   position: relative;
 
-  /* height: 584px; */
   height: calc(100vh - 115px);
   margin: 0px 8px 0px 8px;
-
-  /* border-style: dashed; */
-  /* border-color: lightgray; */
-  /* border-width: 1px; */
 
   font-family: "Quicksand", sans-serif;
 }
@@ -203,6 +194,10 @@ body::-webkit-scrollbar-thumb {
   color: gray;
 }
 
+.container .row .col a {
+  text-decoration: none;
+}
+
 .container .row .col a svg path {
   fill: black;
 
@@ -236,6 +231,7 @@ body::-webkit-scrollbar-thumb {
 
 #footer {
   background-color: white;
+  /* background-image: url("/static/assets/theFOUR-pattern.png"); */
 }
 
 #footer .container .row .socialMedia .container .row .col {
@@ -311,24 +307,65 @@ body::-webkit-scrollbar-thumb {
 
 /* 404 */
 
+.Err404Img {
+  margin: -10% 0 0 0;
+
+  width: 100%;
+}
+
 .Err404 {
   position: absolute;
-  margin: calc(50vw - 25%) calc(50vw - 25%);
-  width: 50%;
-  height: 50%;
+  margin: 5% 20vw;
+  width: 60%;
+  height: 60%;
+}
+
+.Err404 div {
+  margin: 5px 10%;
 }
 
 .Err404 h1 {
   margin: auto;
 
   font-family: "Quicksand", sans-serif;
-  font-size: 1.8rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
-.Err404 h5 {
+.Err404 h1 a {
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+}
+
+/* .Err404 h5 {
   margin: auto;
 
   font-family: "Quicksand", sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: lightgray;
+} */
+
+.backBtn {
+  position: absolute;
+  margin: 5px calc(50% - 90px);
+  padding: 0px 15px 0px 15px;
+
+  background-color: black;
+  border-radius: 24px;
+  width: 150px;
+
+  line-height: 42px;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+
+  transition: 400ms;
+}
+
+.backBtn:hover {
+  background-color: #b2b1d9;
+  color: black;
 }
