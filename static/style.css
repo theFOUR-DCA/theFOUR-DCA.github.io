@@ -13,17 +13,33 @@ body {
   scrollbar-color: #b2b1d9 #242430;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 body::-webkit-scrollbar {
   width: 0.95rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 body::-webkit-scrollbar-track {
   background: #242430;
 }
 
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
 body::-webkit-scrollbar-thumb {
   background: #b2b1d9;
 }
+
+/* body::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:hover {
+  background: lightgray;
+} */
 
 /* body a {
     align-self: left;
@@ -32,24 +48,14 @@ body::-webkit-scrollbar-thumb {
 .logo {
   width: 84px;
   height: 84px;
-  margin: 8px 0px 0px 16px;
+  margin: 16px 0px 0px 48px;
 
   transition: 400ms;
 }
 
-.logo:hover {
-  /* -webkit-filter: drop-shadow(1px 1px 0px #b2b1d9); */
-  /* -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX = 1, OffY = 1, Color = '#b2b1d9')"; */
-  /* filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX = 1, OffY = 1, Color = '#b2b1d9')"; */
-
-  width: 90px;
-  height: 90px;
-  margin: 5px -3px -3px 13px;
-}
-
 .quoteBtn {
   position: absolute;
-  right: 16px;
+  right: 32px;
   margin: 29px 16px 0px 0px;
   padding: 0px 16px 0px 16px;
 
@@ -87,18 +93,18 @@ body::-webkit-scrollbar-thumb {
 
   position: absolute;
   top: -45px;
-  left: 29px;
+  left: 32px;
 
   width: calc(100vh - 105px);
   line-height: 42px;
 
+  font-size: 1.55rem;
   text-align: center;
 }
 
 .hContainer h2 a {
   margin: 0px 10px 0px 10px;
 
-  font-size: 1.65rem;
   color: black;
   text-decoration: none;
 
@@ -151,6 +157,64 @@ body::-webkit-scrollbar-thumb {
   color: white;
   font-size: 2.1rem;
   text-align: center;
+}
+
+.serviceTiles {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  width: 100%;
+  height: calc(50vh + 64px);
+  background-color: #111110;
+}
+
+#ourServices .serviceTile {
+  /* display: inline-block; */
+  flex: 0 0 auto;
+
+  margin: 16px 18px;
+  width: 40vh;
+  height: 50vh;
+
+  box-sizing: content-box;
+
+  box-shadow: 0 2px 4px 1px #b2b1d9;
+  border-radius: 5px;
+  background-color: white;
+
+  transition: 400ms;
+}
+
+#ourServices .serviceTile:hover {
+  margin: 8px 18px 24px 18px;
+}
+
+#ourServices .serviceTiles .serviceTile h1 {
+  margin: 16px;
+  overflow-x: none;
+
+  color: black;
+  font-size: 1.8rem;
+  text-align: center;
+  white-space: normal;
+}
+
+#ourServices .serviceTiles .serviceTile img {
+  margin: 16px 32px;
+
+  width: calc(100% - 64px);
+}
+
+#ourServices .serviceTiles .serviceTile p {
+  margin: 16px;
+  overflow-x: none;
+
+  color: black;
+  white-space: normal;
 }
 
 #ourTeam {
@@ -253,6 +317,30 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 978px) {
+  .logo {
+    width: 84px;
+    height: 84px;
+    margin: 8px 0px 0px 16px;
+
+    transition: 400ms;
+  }
+
+  .quoteBtn {
+    right: 0px;
+  }
+
+  /* 404 */
+
+  #logo404 {
+    margin: 0 0 0 8px;
+  }
+
+  .hContainer h2 {
+    left: 29px;
+
+    font-size: 2.1rem;
+  }
+
   #aboutUs,
   #ourServices,
   #ourTeam,
@@ -275,6 +363,14 @@ body::-webkit-scrollbar-thumb {
     height: 2.7rem;
   }
 
+  #ourServices {
+    margin-bottom: 36px;
+  }
+
+  #ourServices .serviceTiles .serviceTile h1 {
+    font-size: 1.65rem;
+  }
+
   .dividerC svg,
   .dividerD svg,
   .dividerE svg {
@@ -292,6 +388,34 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 375px) {
+  .logo {
+    width: 84px;
+    height: 84px;
+    margin: 8px 0px 0px 16px;
+
+    transition: 400ms;
+  }
+
+  .quoteBtn {
+    right: 0px;
+  }
+
+  /* 404 */
+
+  #logo404 {
+    margin: 0 0 0 8px;
+  }
+
+  .hContainer h2 {
+    left: 29px;
+
+    font-size: 1.5rem;
+  }
+
+  #ourServices .serviceTiles .serviceTile h1 {
+    font-size: 1.2rem;
+  }
+
   .container .row {
     display: block;
   }
@@ -307,8 +431,12 @@ body::-webkit-scrollbar-thumb {
 
 /* 404 */
 
-#logo404 {
-  margin: 0 0 0 8px;
+.logo404 {
+  width: 84px;
+  height: 84px;
+  margin: 8px 0px 0px 40px;
+
+  transition: 400ms;
 }
 
 .Err404Img {
@@ -318,6 +446,7 @@ body::-webkit-scrollbar-thumb {
 
 .Err404 {
   position: absolute;
+  top: 25%;
   margin: 5% 20vw;
   width: 60%;
   height: 60%;
