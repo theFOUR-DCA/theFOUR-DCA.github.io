@@ -37,20 +37,18 @@ body::-webkit-scrollbar-thumb {
   background: #b2b1d9;
 }
 
-/* body::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:hover {
-  background: lightgray;
-} */
-
-/* body a {
-    align-self: left;
-} */
-
 .logo {
   width: 84px;
   height: 84px;
   margin: 16px 0px 0px 48px;
 
   transition: 400ms;
+}
+
+.logo:hover {
+  width: 90px;
+  height: 90px;
+  margin: 13px -3px -3px 45px;
 }
 
 .quoteBtn {
@@ -148,12 +146,67 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
+#whyUs {
+  background-color: white;
+}
+
+#whyUs h1 {
+  color: black;
+  font-size: 2.1rem;
+}
+
+#whyUs p {
+  margin-top: 18px;
+
+  color: black;
+}
+
+#whyUs h4 {
+  margin: 18px 0;
+
+  color: black;
+  text-align: left;
+}
+
+.contactUsBtn {
+  position: absolute;
+  padding: 0px 15px 0px 15px;
+
+  background-color: black;
+  border-radius: 24px;
+  width: 150px;
+
+  line-height: 42px;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+
+  transition: 400ms;
+}
+
+.contactUsBtn:hover {
+  background-color: #b2b1d9;
+  color: black;
+}
+
+.container .row .col .whyUsVector {
+  position: absolute;
+  right: -8.6px;
+  padding: 0;
+
+  height: 48vh;
+  width: auto;
+}
+
 #ourServices {
   background-color: black;
-  height: 584px;
 }
 
 #ourServices h1 {
+  margin-bottom: 36px;
+
   color: white;
   font-size: 2.1rem;
   text-align: center;
@@ -173,16 +226,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 #ourServices .serviceTile {
-  /* display: inline-block; */
   flex: 0 0 auto;
 
+  box-sizing: content-box;
   margin: 16px 18px;
   width: 40vh;
   height: 50vh;
 
-  box-sizing: content-box;
-
-  box-shadow: 0 2px 4px 1px #b2b1d9;
   border-radius: 5px;
   background-color: white;
 
@@ -363,8 +413,8 @@ body::-webkit-scrollbar-thumb {
     height: 2.7rem;
   }
 
-  #ourServices {
-    margin-bottom: 36px;
+  .container .row .col .whyUsVector {
+    right: -8.7px;
   }
 
   #ourServices .serviceTiles .serviceTile h1 {
@@ -412,6 +462,14 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.5rem;
   }
 
+  .container .row .col .whyUsVector {
+    display: none;
+  }
+
+  #ourServices {
+    margin-bottom: 0;
+  }
+
   #ourServices .serviceTiles .serviceTile h1 {
     font-size: 1.2rem;
   }
@@ -437,6 +495,12 @@ body::-webkit-scrollbar-thumb {
   margin: 8px 0px 0px 40px;
 
   transition: 400ms;
+}
+
+.logo404:hover {
+  width: 90px;
+  height: 90px;
+  margin: 5px -3px -3px 37px;
 }
 
 .Err404Img {
