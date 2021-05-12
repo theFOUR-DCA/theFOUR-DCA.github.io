@@ -452,6 +452,12 @@ video::-webkit-media-controls {
   background-color: white;
 }
 
+#footer .container .row .col a .footerLogo {
+  width: 84px;
+  height: 84px;
+  padding: 0px;
+}
+
 #footer .container .row .socialMedia .container .row .col {
   padding: 5px;
 }
@@ -573,13 +579,19 @@ video::-webkit-media-controls {
   }
 
   #footer {
-    height: 80vh;
+    height: 50vh;
+  }
+
+  #footer .container .row .contacts,
+  #footer .container .row .empty {
+    display: none;
   }
 }
 
 @media screen and (max-width: 375px) {
   body {
     overflow-x: hidden;
+    width: 100vw;
   }
 
   .logo {
@@ -668,6 +680,10 @@ video::-webkit-media-controls {
 
   .quoteFromInput .container .row .col button {
     width: 100%;
+  }
+
+  #footer .container .row .socialMedia .container .row {
+    display: inline-flex;
   }
 }
 
