@@ -359,7 +359,71 @@
 
       <br />
 
-      <h1>Have a business idea? Tell us about it!</h1>
+      <h1>
+        Have a business idea? <br style="display: none" />
+        Tell us about it!
+      </h1>
+
+      <form action="" method="POST" class="quoteFromInput">
+        <div class="container">
+          <div class="row row-cols-md-1 row-cols-lg-2">
+            <div class="col">
+              <label for="nameInput" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="nameInput" />
+            </div>
+            <div class="col">
+              <label for="emailInput" class="form-label">Your Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="emailInput"
+                placeholder="Optional"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <label for="description" class="form-label">Tell Us More</label>
+              <textarea
+                name="description"
+                rows="1"
+                cols="50"
+                wrap="physical"
+                class="form-control"
+                id="description"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row row-cols-md-1 row-cols-lg-2">
+            <div class="col">
+              <select
+                class="form-select form-select-md mb-3"
+                aria-label=".form-select-md"
+              >
+                <option selected>How did you hear about us?</option>
+                <option value="searchEngine">
+                  Search Engine (e.g. Google)
+                </option>
+                <option value="friends">Friends / Colleagues</option>
+                <option value="socialMedia">
+                  Social Media (e.g. Facebook)
+                </option>
+              </select>
+            </div>
+            <div class="col">
+              <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <br />
     </div>
 
     <div id="footer" class="section">
@@ -377,8 +441,6 @@
           ></path>
         </svg>
       </div>
-
-      <br />
 
       <div class="container">
         <div class="row row-cols-md-2 row-cols-lg-4">
@@ -443,11 +505,5 @@
 
       <h5>Created by theFOUR Creative Digital Agency</h5>
     </div>
-
-    <script type="text/javascript">
-      window.onload = function () {
-        var x = document.getElementById("video").play();
-      };
-    </script>
   </body>
 </html>
