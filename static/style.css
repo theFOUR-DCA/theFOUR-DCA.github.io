@@ -157,7 +157,6 @@ video::-webkit-media-controls {
 
 #aboutUs {
   background-color: black;
-  height: 584px;
 }
 
 .dividerA svg {
@@ -169,6 +168,17 @@ video::-webkit-media-controls {
   color: white;
   font-size: 2.1rem;
   text-align: center;
+}
+
+#aboutUs .container .row .col {
+  margin: 0 7.5%;
+}
+
+#aboutUs .container .row .col p {
+  font-size: 1.2rem;
+  color: white;
+
+  margin-bottom: 120px; /* temporary */
 }
 
 #whyUs {
@@ -184,6 +194,10 @@ video::-webkit-media-controls {
   margin-top: 18px;
 
   color: black;
+}
+
+#whyUs p a {
+  font-weight: 600;
 }
 
 #whyUs h4 {
