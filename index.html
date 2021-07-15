@@ -412,7 +412,67 @@
         </div>
       </div>
 
-      <form action="" method="POST" class="quoteFromInput">
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function quoteRequest() {
+          var name = document.getElementById("nameInput");
+          var email = document.getElementById("emailInput");
+          var number = document.getElementById("numberInput");
+          var link = document.getElementById("linkInput");
+
+          var more = document.getElementById("description");
+
+          if (
+            name.value == "" ||
+            number.value == "" ||
+            link.value == "" ||
+            more.value == ""
+          ) {
+            const selectedHTML = document.querySelector("#ErrMsg");
+
+            selectedHTML.insertAdjacentHTML(
+              "beforeend",
+              `<h4 style="color: #B80000;">Form is Incomplete</h4>`
+            );
+
+            return false;
+          } else {
+            if (email == "") {
+              email = "N/A";
+            }
+            if (link == "How did you hear about us?") {
+              link = "N/A";
+            }
+
+            Email.send({
+              SecureToken: "9c4890cd-67c0-4189-be99-6dbc311dfd08",
+              To: "Sameh.AbuRadi@CODE.Berlin",
+              From: "site@theFOUR.co.za",
+              Subject: "A Potential Task",
+              Body: `
+                <h4>Name: ${name},</h4>
+                <h4>Email: ${email},</h4>
+                <h4>Number: ${number},</h4>
+                <h4>Link: ${link}.</h4>
+                <h4>Message: "${more}"</h4>
+              `,
+            }).then((message) =>
+              alert(
+                "Thank you for getting in touch, we'll reach out to you soon."
+              )
+            );
+
+            name.innerHTML = "";
+            email.innerHTML = "";
+            number.innerHTML = "";
+            more.innerHTML = "";
+
+            window.location.replace("https://thefour.co.za/#quoteFrom");
+          }
+        }
+      </script>
+
+      <form class="quoteFromInput">
         <div class="container">
           <div class="row row-cols-md-1 row-cols-lg-2">
             <div class="col">
@@ -442,6 +502,7 @@
               <select
                 class="form-select form-select-md mb-3"
                 aria-label=".form-select-md"
+                id="linkInput"
               >
                 <option selected>How did you hear about us?</option>
                 <option value="searchEngine">
@@ -461,7 +522,6 @@
             <div class="col">
               <label for="description" class="form-label">Tell Us More</label>
               <textarea
-                name="description"
                 rows="1"
                 cols="50"
                 wrap="physical"
@@ -476,7 +536,12 @@
         <div class="container">
           <div class="row row-cols-md-1 row-cols-lg-2">
             <div class="col">
-              <button class="btn btn-primary" type="submit">Send</button>
+              <button class="btn btn-primary" onclick="return quoteRequest()">
+                Request a Quote
+              </button>
+            </div>
+            <div class="col">
+              <div id="ErrMsg"></div>
             </div>
           </div>
         </div>

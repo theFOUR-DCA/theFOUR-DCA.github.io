@@ -404,6 +404,7 @@ video::-webkit-media-controls {
   background-color: #111100;
   border-color: #fdfefd;
   border-radius: 18px;
+  color: white;
 }
 
 .form-control:focus {
