@@ -450,11 +450,11 @@
               From: "site@theFOUR.co.za",
               Subject: "A Potential Task",
               Body: `
-                <h4>Name: ${name},</h4>
-                <h4>Email: ${email},</h4>
-                <h4>Number: ${number},</h4>
-                <h4>Link: ${link}.</h4>
-                <h4>Message: "${more}"</h4>
+                <h4>Name: ${name.toString()},</h4>
+                <h4>Email: ${email.toString()},</h4>
+                <h4>Number: ${number.toString()},</h4>
+                <h4>Link: ${link.toString()}.</h4>
+                <h4>Message: "${more.toString()}"</h4>
               `,
             }).then(
               (message) =>
