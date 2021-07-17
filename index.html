@@ -456,18 +456,18 @@
                 <h4>Link: ${link.value}.</h4>
                 <h4>Message: "${more.value}"</h4>
               `,
-            }).then(
-              (message) =>
-                alert(
-                  "Thank you for getting in touch, we'll reach out to you soon."
-                )
-              // window.location.replace("https://thefour.co.za/#quoteFrom")
-            );
+            }).then((message) => {
+              alert(
+                "Thank you for getting in touch, we'll reach out to you soon."
+              );
 
-            name.innerHTML = "";
-            email.innerHTML = "";
-            number.innerHTML = "";
-            more.innerHTML = "";
+              name.innerHTML = "";
+              email.innerHTML = "";
+              number.innerHTML = "";
+              more.innerHTML = "";
+
+              return false;
+            });
           }
         }
       </script>
