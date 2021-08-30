@@ -444,30 +444,30 @@
               link = "N/A";
             }
 
-            Email.send({
-              SecureToken: "9c4890cd-67c0-4189-be99-6dbc311dfd08",
-              To: "Sameh.AbuRadi@CODE.Berlin",
-              From: "site@theFOUR.co.za",
-              Subject: "A Potential Task",
-              Body: `
-                <h4>Name: ${name.value},</h4>
-                <h4>Email: ${email.value},</h4>
-                <h4>Number: ${number.value},</h4>
-                <h4>Link: ${link.value}.</h4>
-                <h4>Message: "${more.value}"</h4>
-              `,
-            }).then((message) => {
-              alert(
-                "Thank you for getting in touch, we'll reach out to you soon."
-              );
+            // Email.send({
+            //   SecureToken: "9c4890cd-67c0-4189-be99-6dbc311dfd08",
+            //   To: "Sameh.AbuRadi@CODE.Berlin",
+            //   From: "site@theFOUR.co.za",
+            //   Subject: "A Potential Task",
+            //   Body: `
+            //     <h4>Name: ${name.value},</h4>
+            //     <h4>Email: ${email.value},</h4>
+            //     <h4>Number: ${number.value},</h4>
+            //     <h4>Link: ${link.value}.</h4>
+            //     <h4>Message: "${more.value}"</h4>
+            //   `,
+            // }).then((message) => {
+            //   alert(
+            //     "Thank you for getting in touch, we'll reach out to you soon."
+            //   );
 
-              name.innerHTML = "";
-              email.innerHTML = "";
-              number.innerHTML = "";
-              more.innerHTML = "";
+            //   name.innerHTML = "";
+            //   email.innerHTML = "";
+            //   number.innerHTML = "";
+            //   more.innerHTML = "";
 
-              return false;
-            });
+            //   return false;
+            // });
           }
         }
       </script>
