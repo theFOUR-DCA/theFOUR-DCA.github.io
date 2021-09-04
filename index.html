@@ -8,6 +8,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <meta property="og:image" content="static/assets/preview-image.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -31,6 +32,14 @@
       <img class="logo" src="static/assets/theFOUR.png" />
     </a>
     <a class="quoteBtn" href="#quoteFrom">Get a Quote</a>
+
+    <div id="disclaimer">
+      <h4>
+        This website is no longer maintained by us and stands only as a legacy
+        of our short-lived brand.
+      </h4>
+    </div>
+
     <div class="hContainer">
       <h2>
         <a href="#aboutUs">About Us</a>
@@ -414,60 +423,98 @@
 
       <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script>
-        function quoteRequest() {
-          var name = document.getElementById("nameInput");
-          var email = document.getElementById("emailInput");
-          var number = document.getElementById("numberInput");
-          var link = document.getElementById("linkInput");
+        function quateForm() {
+          var name = document.forms["quoteFrom"]["nameInput"].value;
+          var email = document.forms["quoteFrom"]["emailInput"].value;
+          var phone = document.forms["quoteFrom"]["numberInput"].value;
+          var link = document.forms["quoteFrom"]["linkInput"].value;
 
-          var more = document.getElementById("description");
+          var more = document.forms["quoteFrom"]["description"].value;
 
           if (
-            name.value == "" ||
-            number.value == "" ||
-            link.value == "" ||
-            more.value == ""
+            name == "" ||
+            email == "" ||
+            more == "" ||
+            link == "" ||
+            !document.querySelector("#checkbox:checked")
           ) {
-            const selectedHTML = document.querySelector("#ErrMsg");
+            if (name == "") {
+              document.forms["quoteFrom"]["nameInput"].placeholder =
+                "Bitte geben Sie einen Namen ein";
+              document.forms["quoteFrom"]["nameInput"].classList.add(
+                "formIncompleteError"
+              );
+            }
 
-            selectedHTML.insertAdjacentHTML(
-              "beforeend",
-              `<h4 style="color: #B80000;">Form is Incomplete</h4>`
-            );
+            if (email == "") {
+              document.forms["quoteFrom"]["emailInput"].placeholder =
+                "Bitte geben Sie eine Email ein";
+              document.forms["quoteFrom"]["emailInput"].classList.add(
+                "formIncompleteError"
+              );
+            }
+
+            if (more == "") {
+              document.forms["quoteFrom"]["description"].placeholder =
+                "Bitte hinterlassen Sie eine Nachricht zu Senden";
+              document.forms["quoteFrom"]["description"].classList.add(
+                "formIncompleteError"
+              );
+            }
+
+            if (!document.querySelector("#checkbox:checked")) {
+              document.querySelector(".legalNote").style.textDecoration =
+                "underline";
+            }
 
             return false;
           } else {
             if (email == "") {
               email = "N/A";
             }
-            if (link == "How did you hear about us?") {
-              link = "N/A";
-            }
+            document.getElementById("ErrMsg").innerHTML = ``;
 
-            // Email.send({
-            //   SecureToken: "9c4890cd-67c0-4189-be99-6dbc311dfd08",
-            //   To: "Sameh.AbuRadi@CODE.Berlin",
-            //   From: "site@theFOUR.co.za",
-            //   Subject: "A Potential Task",
-            //   Body: `
-            //     <h4>Name: ${name.value},</h4>
-            //     <h4>Email: ${email.value},</h4>
-            //     <h4>Number: ${number.value},</h4>
-            //     <h4>Link: ${link.value}.</h4>
-            //     <h4>Message: "${more.value}"</h4>
-            //   `,
-            // }).then((message) => {
-            //   alert(
-            //     "Thank you for getting in touch, we'll reach out to you soon."
-            //   );
+            Email.send({
+              SecureToken: "9c4890cd-67c0-4189-be99-6dbc311dfd08",
+              To: "Sameh.AbuRadi@CODE.Berlin",
+              From: "site@theFOUR.co.za",
+              Subject: "A Potential Task",
+              Body: `
+                <h4>Name: ${name},</h4>
+                <h4>Email: ${email},</h4>
+                <h4>Number: ${number},</h4>
+                <h4>Link: ${link}.</h4>
+                <h4>Message: "${more}"</h4>
+              `,
+            }).then((message) => {
+              console.log(message);
 
-            //   name.innerHTML = "";
-            //   email.innerHTML = "";
-            //   number.innerHTML = "";
-            //   more.innerHTML = "";
+              alert("Vielen Dank für Ihre Kontaktaufnahme.");
+            });
 
-            //   return false;
-            // });
+            document.forms["quoteFrom"]["nameInput"].value = ``;
+            document.forms["quoteFrom"]["emailInput"].value = ``;
+            document.forms["quoteFrom"]["phoneInput"].value = ``;
+            document.forms["quoteFrom"]["description"].value = ``;
+
+            document.forms["quoteFrom"]["nameInput"].placeholder = ``;
+            document.forms["quoteFrom"]["emailInput"].placeholder = ``;
+            document.forms["quoteFrom"]["description"].placeholder = ``;
+
+            document.forms["quoteFrom"]["nameInput"].classList.remove(
+              "formIncompleteError"
+            );
+            document.forms["quoteFrom"]["emailInput"].classList.remove(
+              "formIncompleteError"
+            );
+            document.forms["quoteFrom"]["description"].classList.remove(
+              "formIncompleteError"
+            );
+
+            document.querySelector("#checkbox").checked = false;
+            document.querySelector(".legalNote").style.textDecoration = "none";
+
+            return false;
           }
         }
       </script>
